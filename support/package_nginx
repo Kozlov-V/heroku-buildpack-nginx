@@ -30,6 +30,7 @@ basedir="$( cd -P "$( dirname "$0" )" && pwd )"
 # make a temp directory
 tempdir=$(mktemp -d -t nginx.XXXXXX)
 pushd $tempdir
+git clone https://github.com/arut/nginx-rtmp-module.git
 
 curl http://nginx.org/download/nginx-${nginx_version}.tar.gz -o nginx.tgz
 tar xzf nginx.tgz
